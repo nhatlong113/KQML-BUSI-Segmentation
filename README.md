@@ -34,7 +34,7 @@ QAC-UNet extends a HAU-Net-style hybrid CNN–Transformer architecture and intro
 The full feature maps remain in the classical network. Only compact, low-dimensional descriptors are sent to the quantum circuits, reducing quantum-resource requirements and making the framework more compatible with the **NISQ era**.
 
 <p align="center">
-  <img src="Fig1_QAC_UNet_Overall_Architecture.png" width="900" alt="Overall architecture of QAC-UNet"/>
+  <img src="assets/Fig1_QAC_UNet_Overall_Architecture.png" width="900" alt="Overall architecture of QAC-UNet"/>
 </p>
 
 ## **Overall Architecture**
@@ -86,7 +86,7 @@ Here:
 The output heads are initialized to zero, so QGIN initially behaves like standard instance normalization and gradually learns image-specific corrections during training.
 
 <p align="center">
-  <img src="Fig2_QGIN_Module.png" width="850" alt="Quantum-Generated Instance Normalization module"/>
+  <img src="assets/Fig2_QGIN_Module.png" width="850" alt="Quantum-Generated Instance Normalization module"/>
 </p>
 
 ### **3. Quantum Skip Coefficient Modulation**
@@ -140,7 +140,7 @@ Because the gate values are bounded between -1 and 1, the multiplier \(1+g_l\) r
 Independent QSCM branches are applied to the 64-, 128-, and 256-channel skip features.
 
 <p align="center">
-  <img src="Fig3_QSCM_Module.png" width="850" alt="Quantum Skip Coefficient Modulation module"/>
+  <img src="assets/Fig3_QSCM_Module.png" width="850" alt="Quantum Skip Coefficient Modulation module"/>
 </p>
 
 ### **4. Quantum Spline-Adaptive Gate**
@@ -192,7 +192,7 @@ X\left(1+a\right)
 The scalar \(a\) is shared across all channels and spatial positions of the current image. Therefore, QSAG can attenuate, preserve, or amplify the entire semantic representation without changing its internal spatial organization.
 
 <p align="center">
-  <img src="Fig4_QSAG_Module.png" width="850" alt="Quantum Spline-Adaptive Gate module"/>
+  <img src="assets/Fig4_QSAG_Module.png" width="850" alt="Quantum Spline-Adaptive Gate module"/>
 </p>
 
 ## **Quantum Circuit Design**
